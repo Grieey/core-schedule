@@ -1,0 +1,50 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'com.github.dcendents.android-maven'
+}
+
+group = 'com.github.grieey'
+
+android {
+    compileSdkVersion androids.compileSdkVersion
+    buildToolsVersion androids.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion androids.minSdkVersion
+        targetSdkVersion androids.compileSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility androids.javaSourceCompatibility
+        targetCompatibility androids.javaSourceCompatibility
+    }
+    kotlinOptions {
+        jvmTarget = androids.jvm
+    }
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:${androids.kotlin}"
+    implementation "androidx.core:core-ktx:${androidx.ktx}"
+    implementation "androidx.appcompat:appcompat:${androidx.appcompat}"
+    implementation "com.google.android.material:material:${androidx.material}"
+    implementation "androidx.constraintlayout:constraintlayout:${androidx.constraintlayout}"
+
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}
+

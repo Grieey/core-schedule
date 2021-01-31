@@ -1,0 +1,3 @@
+include ':core-schedule'
+include ':app'
+rootProject.name = "CoreSchedule"
