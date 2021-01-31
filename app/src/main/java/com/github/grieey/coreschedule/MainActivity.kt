@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
       // do something on Main thread
     }
     GlobalScope.launch {
-
+      // do
     }
   }
 }
