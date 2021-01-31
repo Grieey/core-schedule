@@ -41,10 +41,7 @@ dependencies {
     implementation "androidx.core:core-ktx:${androidx.ktx}"
     implementation "androidx.appcompat:appcompat:${androidx.appcompat}"
     implementation "com.google.android.material:material:${androidx.material}"
-    implementation "androidx.constraintlayout:constraintlayout:${androidx.constraintlayout}"
-
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    api "io.reactivex.rxjava3:rxandroid:${deps.rxjava}"
+    api "io.reactivex.rxjava3:rxjava:${deps.rxjava}"
 }
 
