@@ -43,5 +43,7 @@ dependencies {
     implementation "com.google.android.material:material:${androidx.material}"
     api "io.reactivex.rxjava3:rxandroid:${deps.rxjava}"
     api "io.reactivex.rxjava3:rxjava:${deps.rxjava}"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:${deps.coroutines}"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:${deps.coroutines}"
 }
 
